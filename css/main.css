@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+:root {
+  font-family: 'Lato', sans-serif;
+  /*-------------Colors------------- */
+  --ColorDarkA: hsl(0, 0%, 6.472%);
+  /* 1.618*4 */
+  --ColorDarkB: hsl(0, 0%, 3.236%);
+  /* 1.618*2 */
+  --ColorWhiteA: hsl(0, 0%, 93.528%);
+  /* 100-6.472 */
+  --ColorWhiteB: hsl(0, 0%, 90.292%);
+  /* 1.618*6-100  */
+  /*-------------Perfect Fifth (1.500) Base Size 22px------------- */
+  --FontD: 375.89px;
+  --FontH1: 250.59px;
+  --FontH2: 167.06px;
+  --FontH3: 111.38px;
+  --FontH4: 74.25px;
+  --FontH5: 49.50px;
+  --FontParagraph: 33px;
+  --FontSubtitle: 22px;
+  /*-------------GoldenRatio (1.618) (Viewport Width 1920px)------------- */
+  --GoldenRatio1: 1920px;
+  --GoldenRatio2: 1186.65px;
+  --GoldenRatio3: 733.41px;
+  --GoldenRatio4: 453.28px;
+  --GoldenRatio5: 280.15px;
+  --GoldenRatio6: 173.15px;
+  --GoldenRatio7: 107.01px;
+  --GoldenRatio8: 66.14px;
+  --GoldenRatio9: 40.88px;
+  --GoldenRatio10: 25.27px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--ColorDarkA);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ColorWhiteA);
+  opacity: 0;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  /* background: url(../img/LandingPageLayout.jpg); */
+  /* background: url(../img/SlideLayout.jpg); */
+  /* background: url(../img/iCodeAyushLayout.jpg); */
+  background-size: cover;
+}
+
+#wrapper #logo {
+  position: absolute;
+  left: var(--GoldenRatio7);
+  top: var(--GoldenRatio7);
+  -webkit-text-fill-color: transparent;
+}
+
+#wrapper #logo h1 {
+  font-size: var(--FontH5);
+  font-weight: 900;
+  background: url(../img/x1.jpg) no-repeat top;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 95%;
+  transition: all 0.31s ease;
+  transform-origin: left;
+}
+
+#wrapper #logo h1:hover {
+  transform: scale(1.13);
+  background: url(../img/x1.jpg) no-repeat center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+}
+
+#wrapper #Navbar {
+  display: none;
+}
+
+#wrapper nav {
+  position: absolute;
+  right: var(--GoldenRatio7);
+  top: var(--GoldenRatio7);
+  width: var(--GoldenRatio4);
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrapper nav a {
+  text-decoration: none;
+  font-size: var(--FontSubtitle);
+  font-weight: 400;
+  color: var(--ColorDarkA);
+  transition: transform 0.31s ease;
+  transform-origin: center;
+}
+
+#wrapper nav a:hover {
+  transform: scale(1.13);
+}
+
+#wrapper nav a span {
+  display: block;
+}
+
+#wrapper section {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: right;
+  right: 50%;
+  cursor: default;
+}
+
+#wrapper section h1 {
+  font-size: var(--FontH3);
+  font-weight: 700;
+  color: var(--ColorDarkA);
+  transition: transform 0.31s ease;
+  transform-origin: right bottom;
+}
+
+#wrapper section h1:hover {
+  transform: scale(1.13);
+}
+
+#wrapper section h1 span {
+  display: block;
+}
+
+#wrapper section p {
+  font-size: var(--FontParagraph);
+  font-weight: 400;
+  color: var(--ColorDarkA);
+  transition: transform 0.31s ease;
+  transform-origin: right center;
+}
+
+#wrapper section p:hover {
+  transform: scale(1.13);
+}
+
+#wrapper section p span {
+  display: block;
+}
+
+#wrapper section p:nth-child(3) {
+  transform-origin: right top;
+}
+
+#wrapper #d {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+#wrapper #d p {
+  font-size: var(--FontD);
+  font-weight: 900;
+  background: url(../img/x1.jpg) no-repeat center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+  transition: all 0.31s ease;
+  transform-origin: left;
+}
+
+#wrapper #d p:hover {
+  transform: scale(1.13);
+  background: url(../img/x1.jpg) no-repeat top;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 130%;
+}
+
+#wrapper #ScrollDown {
+  position: absolute;
+  bottom: var(--GoldenRatio7);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+}
+
+#wrapper #ScrollDown p {
+  font-size: var(--FontSubtitle);
+  font-weight: 400;
+  color: var(--ColorDarkA);
+}
+
+#wrapper #ImageContainer {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  left: 50%;
+}
+
+#wrapper #ImageContainer img {
+  width: var(--GoldenRatio4);
+  margin-left: var(--GoldenRatio7);
+}
+
+#wrapper #slide {
+  position: absolute;
+  right: 50%;
+  height: 100vh;
+  margin-right: var(--GoldenRatio9);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: column;
+  cursor: default;
+}
+
+#wrapper #slide h1 {
+  font-size: var(--FontH5);
+  font-weight: 700;
+  color: var(--ColorDarkA);
+}
+
+#wrapper #slide p {
+  margin-top: var(--GoldenRatio9);
+  width: var(--GoldenRatio3);
+  font-weight: 400;
+  font-size: var(--FontSubtitle);
+  color: var(--ColorDarkA);
+  text-align: right;
+}
+
+#codeby {
+  height: var(--GoldenRatio4);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--ColorWhiteB);
+}
+
+#codeby a {
+  text-decoration: none;
+  font-size: var(--FontSubtitle);
+  font-weight: 400;
+  color: var(--ColorDarkB);
+}
+
+#codeby a span {
+  font-weight: 700;
+  display: inline-block;
+  color: var(--ColorDarkB);
+}
+
+/*-------------@media (max-width: 1920px)------------- */
+
+@media (max-width: 1920px) {
+  :root {
+    --FontD: 19.578vw;
+    --FontH1: 13.052vw;
+    --FontH2: 8.701vw;
+    --FontH3: 5.801vw;
+    --FontH4: 3.867vw;
+    --FontH5: 2.578vw;
+    --FontParagraph: 1.719vw;
+    --FontSubtitle: 1.146vw;
+    /*-------------GoldenRatio (1.618) (Viewport Width 1920px)------------- */
+    --GoldenRatio1: 100vw;
+    --GoldenRatio2: 61.805vw;
+    --GoldenRatio3: 38.198vw;
+    --GoldenRatio4: 23.608vw;
+    --GoldenRatio5: 14.591vw;
+    --GoldenRatio6: 9.018vw;
+    --GoldenRatio7: 5.573vw;
+    --GoldenRatio8: 3.445vw;
+    --GoldenRatio9: 2.129vw;
+    --GoldenRatio10: 1.316vw;
+  }
+}
+
+/*-------------/@media (max-width: 1920px)------------- */
+
+/*-------------@media (max-width: 400px)------------- */
+
+@media (max-width: 400px) {
+  :root {
+    /*-------------Perfect Fifth (1.500) (Viewport Width 400px) Base Size 10px------------- */
+    --FontD: 42.715vw;
+    --FontH1: 28.477vw;
+    --FontH2: 18.985vw;
+    --FontH3: 12.658vw;
+    --FontH4: 8.438vw;
+    --FontH5: 5.625vw;
+    --FontParagraph: 3.750vw;
+    --FontSubtitle: 2.500vw;
+    /*-------------GoldenRatio (1.618) (Viewport Width 400px)------------- */
+    --GoldenRatio1: 100vw;
+    --GoldenRatio2: 61.805vw;
+    --GoldenRatio3: 38.197vw;
+    --GoldenRatio4: 23.608vw;
+    --GoldenRatio5: 14.590vw;
+    --GoldenRatio6: 9.018vw;
+    --GoldenRatio7: 5.572vw;
+    --GoldenRatio8: 3.445vw;
+    --GoldenRatio9: 2.130vw;
+    --GoldenRatio10: 1.317vw;
+  }
+  #wrapper #Navbar {
+    display: block;
+    position: absolute;
+    right: var(--GoldenRatio7);
+    top: var(--GoldenRatio6);
+    z-index: 3;
+    font-size: var(--FontSubtitle);
+    font-weight: 700;
+    color: var(--ColorDarkA);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #wrapper nav {
+    top: var(--GoldenRatio5);
+    flex-flow: column;
+    z-index: 3;
+    border-radius: 6.18%;
+    background: var(--ColorWhiteB);
+  }
+  #wrapper nav.DisplayNone {
+    pointer-events: none;
+  }
+  #wrapper nav a {
+    height: var(--GoldenRatio7);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center;
+  }
+  #wrapper #ImageContainer {
+    position: unset;
+    height: auto;
+    width: 100vw;
+    padding-top: var(--GoldenRatio5);
+  }
+  #wrapper #ImageContainer img {
+    width: var(--GoldenRatio2);
+    margin: auto;
+  }
+  #wrapper #slide {
+    position: unset;
+    height: auto;
+    margin: var(--GoldenRatio5) auto;
+    align-items: flex-start;
+    width: var(--GoldenRatio2);
+  }
+  #wrapper #slide p {
+    margin-top: var(--GoldenRatio9);
+    width: var(--GoldenRatio2);
+    text-align: left;
+  }
+  #codeby {
+    height: var(--GoldenRatio2);
+  }
+}
+
+/*-------------/@media (max-width: 400px)------------- */
